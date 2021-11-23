@@ -1,15 +1,3 @@
-// We need to set up the files. Where do they go?
-// How do we make the browser prompt a player to fight or skip?
-//  - with alert or prompt
-//  - declare function ex: fight ();
-// How do we store values in JavaScript, like health points and attack points?
-//  - see number 1
-// There must be a way to do math in JavaScript. How similar is it to real-life math?
-
-
-
-
-
 // 1. Prompt player to name robot
 var playerName = window.prompt("What is your robot's name?");
 window.alert(playerName); // This will show the player their name
@@ -20,13 +8,14 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// 3. Initialize opponent's robot, Roborto 
-var enemyName = "Roborto";
+// 3. Initialize opponent's robot
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
+console.log(enemyNames.length);
 
 // create a function using just: function fight () {} or var fight = function () {}
-function fight () {
+var fight = function(enemyName) {
 // 4. Display " Welcome to Robot Gladiators!"
 window.alert("Welcome to Robot Gladiators!");
 
@@ -85,6 +74,12 @@ window.alert("Welcome to Robot Gladiators!");
   }
 }
 
+//Loop
+for(var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames, [i]);
+  console.log(i);
+  console.log(enemyNames[i] + " is at " + i + " index");
+}
   // 8. End of game
 
 fight (); // This executes function
